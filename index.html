@@ -1,322 +1,329 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeScalp V2.0 | Agilidade Institucional para MetaTrader 5</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            dark: '#020617',
-                            card: '#0f172a',
-                            border: '#1e293b',
-                            primary: '#3b82f6',
-                            success: '#10b981',
-                            danger: '#ef4444'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        
-        body { 
-            background-color: #020617; 
-            color: #f8fafc; 
-        }
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-        .gradient-text { 
-            background: linear-gradient(135deg, #60a5fa 0%, #10b981 100%); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-
-        .feature-card {
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover { 
-            transform: translateY(-5px); 
-            border-color: #3b82f6; 
-            background-color: rgba(30, 41, 59, 0.5);
-        }
-
-        .glass { 
-            background: rgba(15, 23, 42, 0.8); 
-            backdrop-filter: blur(12px); 
-        }
-
-        .glow-effect {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: rgba(59, 130, 246, 0.15);
-            filter: blur(100px);
-            border-radius: 50%;
-            z-index: -1;
-        }
-
-        /* Scrollbar customizada */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
-    </style>
-</head>
-<body class="antialiased">
-
-    <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 border-b border-brand-border glass">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <i data-lucide="shield-check" class="text-brand-primary w-7 h-7"></i>
-                <span class="text-xl font-bold tracking-tight uppercase">SafeScalp <span class="text-brand-primary">PRO</span></span>
-            </div>
-            <div class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
-                <a href="#funcionalidades" class="hover:text-white transition-colors">Funcionalidades</a>
-                <a href="#institucional" class="hover:text-white transition-colors">Institucional</a>
-                <a href="#seguranca" class="hover:text-white transition-colors">Segurança</a>
-            </div>
-            <a href="https://pay.kiwify.com.br/Je0XGFE" target="_blank" class="bg-brand-primary hover:bg-blue-500 text-white text-xs font-black px-6 py-2.5 rounded-lg transition-all shadow-lg shadow-blue-500/20 uppercase tracking-tighter">
-                Obter Licença
-            </a>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section class="relative pt-40 pb-24 px-6 overflow-hidden">
-        <div class="glow-effect top-20 left-1/4"></div>
-        <div class="glow-effect bottom-20 right-1/4"></div>
-        
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black mb-8 tracking-[0.2em] uppercase">
-                <i data-lucide="zap" class="w-3 h-3"></i> Advanced Execution Engine
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tighter">
-                Opere com a precisão dos <span class="gradient-text text-white">Algoritmos.</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto font-light">
-                O SafeScalp V2.0 é a camada de inteligência tática para MetaTrader 5. Simplicidade absoluta para focar no gráfico e segurança institucional para blindar a sua conta.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://pay.kiwify.com.br/Je0XGFE" target="_blank" class="w-full sm:w-auto bg-brand-success hover:bg-emerald-400 text-brand-dark font-black px-10 py-5 rounded-xl transition-all flex items-center justify-center gap-2 text-lg shadow-2xl shadow-emerald-500/20 transform hover:-translate-y-1">
-                    <i data-lucide="lock" class="w-5 h-5"></i> ADQUIRIR LICENÇA
-                </a>
-                <a href="SafeScalp_V2.03.ex5" class="w-full sm:w-auto bg-slate-800/50 hover:bg-slate-800 text-white font-bold px-10 py-5 rounded-xl transition-all border border-slate-700 flex items-center justify-center gap-2 transform hover:-translate-y-1">
-                    <i data-lucide="download" class="w-5 h-5"></i> TESTAR 7 DIAS GRÁTIS
-                </a>
-            </div>
-            
-            <p class="mt-8 text-slate-500 text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-2">
-                <i data-lucide="shield" class="w-3 h-3"></i> Garantia incondicional de satisfação
-            </p>
-        </div>
-    </section>
-
-    <!-- FUNCIONALIDADES -->
-    <section id="funcionalidades" class="py-24 px-6 border-t border-brand-border bg-brand-dark/30">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-xs font-black text-brand-primary uppercase tracking-[0.4em] mb-4">Core Technology</h2>
-                <h3 class="text-3xl md:text-5xl font-bold">Engenharia de Execução</h3>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="feature-card p-8 rounded-3xl bg-brand-card border border-brand-border flex flex-col h-full shadow-xl">
-                    <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 text-brand-primary border border-blue-500/20">
-                        <i data-lucide="target" class="w-7 h-7"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4">Puxar pro Zero</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed font-light flex-grow">
-                        Defina o gatilho (ex: 50% do alvo) e a boleta move o seu stop para o ponto de equilíbrio automaticamente, cobrindo spread e custos operacionais.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="feature-card p-8 rounded-3xl bg-brand-card border border-brand-border flex flex-col h-full shadow-xl">
-                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-brand-success border border-emerald-500/20">
-                        <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4">Preview Financeiro</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed font-light flex-grow">
-                        Visualize o seu lucro ou prejuízo em dólares (USD) projetado no gráfico antes mesmo de abrir a ordem. Risco calculado em tempo real.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="feature-card p-8 rounded-3xl bg-brand-card border border-brand-border flex flex-col h-full shadow-xl">
-                    <div class="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center mb-8 text-brand-danger border border-red-500/20">
-                        <i data-lucide="shield-alert" class="w-7 h-7"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4">Anti-Overtrading</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed font-light flex-grow">
-                        Bloqueio automático de novas entradas enquanto estiver posicionado. Disciplina tática para scalpers que operam alta volatilidade.
-                    </p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="feature-card p-8 rounded-3xl bg-brand-card border border-brand-border flex flex-col h-full shadow-xl">
-                    <div class="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-8 text-amber-500 border border-amber-500/20">
-                        <i data-lucide="globe" class="w-7 h-7"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4">Radar de Notícias</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed font-light flex-grow">
-                        Monitorização em tempo real do calendário económico dos EUA. Evite ser surpreendido por picos irracionais de volatilidade.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INSTITUCIONAL / BROKERS -->
-    <section id="institucional" class="py-32 px-6 border-t border-brand-border">
-        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-20">
-            <div class="flex-1">
-                <h2 class="text-xs font-black text-brand-primary uppercase tracking-[0.4em] mb-4">Compatibility</h2>
-                <h3 class="text-4xl font-bold mb-8 leading-tight">Padrão Global de<br>Baixa Latência.</h3>
-                <p class="text-slate-400 mb-10 leading-relaxed font-light text-lg">
-                    A SafeScalp foi desenvolvida para performar nas condições mais exigentes. Se opera via <strong>ActivTrades, Tickmill, Pepperstone</strong> ou está em busca da aprovação em <strong>Prop Firms</strong> como FTMO e MyFundedFX, esta é a ferramenta definitiva.
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="flex items-center gap-3 text-sm font-semibold text-slate-300">
-                        <div class="w-6 h-6 bg-brand-success/20 rounded-full flex items-center justify-center text-brand-success"><i data-lucide="check" class="w-4 h-4"></i></div>
-                        Contas Hedge & Netting
-                    </div>
-                    <div class="flex items-center gap-3 text-sm font-semibold text-slate-300">
-                        <div class="w-6 h-6 bg-brand-success/20 rounded-full flex items-center justify-center text-brand-success"><i data-lucide="check" class="w-4 h-4"></i></div>
-                        Setup Automático Nasdaq
-                    </div>
-                    <div class="flex items-center gap-3 text-sm font-semibold text-slate-300">
-                        <div class="w-6 h-6 bg-brand-success/20 rounded-full flex items-center justify-center text-brand-success"><i data-lucide="check" class="w-4 h-4"></i></div>
-                        Cálculo de Margem Real
-                    </div>
-                    <div class="flex items-center gap-3 text-sm font-semibold text-slate-300">
-                        <div class="w-6 h-6 bg-brand-success/20 rounded-full flex items-center justify-center text-brand-success"><i data-lucide="check" class="w-4 h-4"></i></div>
-                        Suporte a High Spread
-                    </div>
-                </div>
-            </div>
-            <div class="flex-1 w-full relative">
-                <div class="bg-gradient-to-br from-brand-primary/20 to-transparent absolute inset-0 blur-3xl -z-10"></div>
-                <div class="bg-brand-card p-2 rounded-[32px] border border-brand-border shadow-2xl shadow-blue-500/10 overflow-hidden group">
-                    <div class="aspect-video bg-brand-dark rounded-[24px] border border-brand-border flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
-                        <span class="text-slate-700 font-black italic tracking-widest opacity-30 text-xl text-center px-4 uppercase">Interface Otimizada para MetaTrader 5</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEGURANÇA HWID -->
-    <section id="seguranca" class="py-24 px-6 border-y border-brand-border bg-brand-card/50">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="w-20 h-20 bg-brand-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-10 border border-brand-primary/20 rotate-12">
-                <i data-lucide="database" class="w-10 h-10 text-brand-primary"></i>
-            </div>
-            <h2 class="text-3xl font-bold mb-6 leading-tight">Sua Licença, Seu Hardware.</h2>
-            <p class="text-slate-400 mb-12 leading-relaxed text-lg font-light">
-                Utilizamos tecnologia de <strong>Hardware ID (HWID)</strong>. A sua licença é vinculada exclusivamente ao seu computador, garantindo segurança contra acessos não autorizados. Dentro da sua máquina, tem liberdade total para trocar de corretora ou conta sempre que desejar.
-            </p>
-            <div class="flex flex-wrap items-center justify-center gap-12 opacity-30 grayscale contrast-125">
-                <span class="text-2xl font-black tracking-tighter">METATRADER 5</span>
-                <span class="text-2xl font-bold tracking-widest uppercase italic">Cloud-Sync</span>
-                <span class="text-2xl font-black tracking-tighter">SECURED</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING CARD -->
-    <section class="py-32 px-6">
-        <div class="max-w-md mx-auto rounded-[40px] border-2 border-brand-primary p-12 bg-brand-card relative shadow-2xl shadow-blue-500/20 overflow-hidden">
-            <div class="absolute top-0 right-0 bg-brand-primary text-white text-[9px] font-black px-10 py-1.5 rotate-45 translate-x-10 translate-y-4 uppercase tracking-[0.3em]">
-                OFERTA ATIVA
-            </div>
-            
-            <div class="text-center mb-10">
-                <h3 class="text-brand-primary font-black tracking-[0.4em] uppercase text-[10px] mb-4">Acesso Integral</h3>
-                <div class="flex items-baseline justify-center gap-1">
-                    <span class="text-2xl font-bold text-slate-500">R$</span>
-                    <span class="text-8xl font-black tracking-tighter">129</span>
-                </div>
-                <p class="text-slate-500 text-sm mt-4 font-medium uppercase tracking-widest">Licença Semestral</p>
-            </div>
-            
-            <ul class="space-y-5 mb-12 text-sm font-light text-slate-300 border-t border-brand-border pt-10">
-                <li class="flex items-center gap-3"><i data-lucide="check" class="text-brand-success w-4 h-4"></i> SafeScalp V2.0 Original (.ex5)</li>
-                <li class="flex items-center gap-3"><i data-lucide="check" class="text-brand-success w-4 h-4"></i> Puxar pro Zero Inteligente</li>
-                <li class="flex items-center gap-3"><i data-lucide="check" class="text-brand-success w-4 h-4"></i> Machine Lock (Vínculo ao HWID)</li>
-                <li class="flex items-center gap-3"><i data-lucide="check" class="text-brand-success w-4 h-4"></i> Suporte Cloud & Atualizações</li>
-            </ul>
-
-            <a href="https://pay.kiwify.com.br/Je0XGFE" target="_blank" class="block w-full bg-brand-primary hover:bg-blue-500 text-white text-center font-black py-5 rounded-2xl transition-all shadow-xl shadow-blue-500/40 transform hover:scale-[1.03] uppercase tracking-tighter text-lg">
-                QUERO MEU ACESSO AGORA
-            </a>
-            
-            <div class="mt-8 flex items-center justify-center gap-2 text-[10px] text-slate-600 uppercase font-black tracking-[0.2em]">
-                <i data-lucide="lock" class="w-3 h-3"></i> Pagamento Seguro via Kiwify
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-24 px-6 border-t border-brand-border bg-brand-dark">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">Dúvidas Frequentes</h2>
-            
-            <div class="space-y-4">
-                <div class="bg-brand-card border border-brand-border rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2">A boleta abre ordens sozinha?</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed text-justify">Não. A SafeScalp é uma ferramenta de <strong>execução e gestão</strong>. A decisão de entrar no trade é sua. Ela apenas automatiza o risco e a proteção ao <strong>Puxar pro zero</strong> no momento exato definido por si.</p>
-                </div>
-                <div class="bg-brand-card border border-brand-border rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2">Funciona em Contas Demo?</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed text-justify">Sim. Após ativar a sua licença com o e-mail de compra, pode usar a boleta em qualquer conta (Demo, Real ou Prop Firms) dentro do computador cadastrado.</p>
-                </div>
-                <div class="bg-brand-card border border-brand-border rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2">Como é feita a ativação?</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed text-justify">Simples. Ao colocar a boleta no gráfico, basta preencher o campo de e-mail com o mesmo endereço usado na Kiwify. O sistema valida a sua licença via Cloud instantaneamente.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-24 px-6 border-t border-brand-border bg-black">
-        <div class="max-w-6xl mx-auto text-center">
-            <div class="flex items-center justify-center gap-3 mb-10 opacity-40">
-                <i data-lucide="shield-check" class="w-7 h-7"></i>
-                <span class="text-xl font-bold tracking-tight uppercase">SafeScalp</span>
-            </div>
-            <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em] leading-[2.5] max-w-3xl mx-auto font-bold italic">
-                Desenvolvido por Felipe Boca. Ferramenta de execução técnica exclusiva para MT5.<br>
-                O trading de ativos financeiros envolve risco elevado de perda. Resultados passados não garantem lucros futuros.<br>
-                Mantenha sempre a disciplina e o gerenciamento de risco rigoroso.
-            </p>
-            <div class="mt-16 text-slate-800 text-[10px] font-black uppercase tracking-[0.5em]">
-                &copy; 2026 SafeScalp PRO. ALL RIGHTS RESERVED.
-            </div>
-        </div>
-    </footer>
-
-    <!-- Initialize Icons -->
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
-</html>
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="pt-BR" class="scroll-smooth">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>SafeScalp V2.0 | Agilidade Institucional para MetaTrader 5</title>\
+    <!-- Tailwind CSS -->\
+    <script src="https://cdn.tailwindcss.com"></script>\
+    <!-- Lucide Icons -->\
+    <script src="https://unpkg.com/lucide@latest"></script>\
+    <script>\
+        tailwind.config = \{\
+            theme: \{\
+                extend: \{\
+                    colors: \{\
+                        brand: \{\
+                            dark: '#020617',\
+                            card: '#0f172a',\
+                            border: '#1e293b',\
+                            primary: '#3b82f6',\
+                            success: '#10b981',\
+                            danger: '#ef4444'\
+                        \}\
+                    \},\
+                    fontFamily: \{\
+                        sans: ['Inter', 'sans-serif'],\
+                    \},\
+                \}\
+            \}\
+        \}\
+    </script>\
+    <style>\
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');\
+        \
+        body \{ \
+            background-color: #020617; \
+            color: #f8fafc; \
+        \}\
+\
+        .gradient-text \{ \
+            background: linear-gradient(135deg, #60a5fa 0%, #10b981 100%); \
+            -webkit-background-clip: text; \
+            -webkit-text-fill-color: transparent; \
+        \}\
+\
+        .feature-card \{\
+            transition: all 0.3s ease;\
+        \}\
+\
+        .feature-card:hover \{ \
+            transform: translateY(-5px); \
+            border-color: #3b82f6; \
+            background-color: rgba(30, 41, 59, 0.5);\
+        \}\
+\
+        .glass \{ \
+            background: rgba(15, 23, 42, 0.8); \
+            backdrop-filter: blur(12px); \
+        \}\
+\
+        .glow-effect \{\
+            position: absolute;\
+            width: 300px;\
+            height: 300px;\
+            background: rgba(59, 130, 246, 0.15);\
+            filter: blur(100px);\
+            border-radius: 50%;\
+            z-index: -1;\
+        \}\
+\
+        /* Scrollbar customizada */\
+        ::-webkit-scrollbar \{ width: 8px; \}\
+        ::-webkit-scrollbar-track \{ background: #020617; \}\
+        ::-webkit-scrollbar-thumb \{ background: #1e293b; border-radius: 4px; \}\
+        ::-webkit-scrollbar-thumb:hover \{ background: #3b82f6; \}\
+    </style>\
+</head>\
+<body class="antialiased">\
+\
+    <!-- NAVBAR -->\
+    <nav class="fixed w-full z-50 border-b border-brand-border glass">\
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">\
+            <div class="flex items-center gap-2">\
+                <i data-lucide="shield-check" class="text-brand-primary w-7 h-7"></i>\
+                <span class="text-xl font-bold tracking-tight uppercase">SafeScalp <span class="text-brand-primary">PRO</span></span>\
+            </div>\
+            <div class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">\
+                <a href="#funcionalidades" class="hover:text-white transition-colors">Funcionalidades</a>\
+                <a href="#institucional" class="hover:text-white transition-colors">Institucional</a>\
+                <a href="#seguranca" class="hover:text-white transition-colors">Seguran\'e7a</a>\
+            </div>\
+            <a href="https://pay.kiwify.com.br/Je0XGFE" target="_blank" class="bg-brand-primary hover:bg-blue-500 text-white text-xs font-black px-6 py-2.5 rounded-lg transition-all shadow-lg shadow-blue-500/20 uppercase tracking-tighter">\
+                Obter Licen\'e7a\
+            </a>\
+        </div>\
+    </nav>\
+\
+    <!-- HERO SECTION -->\
+    <section class="relative pt-40 pb-24 px-6 overflow-hidden">\
+        <div class="glow-effect top-20 left-1/4"></div>\
+        <div class="glow-effect bottom-20 right-1/4"></div>\
+        \
+        <div class="max-w-4xl mx-auto text-center">\
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black mb-8 tracking-[0.2em] uppercase">\
+                <i data-lucide="zap" class="w-3 h-3"></i> Advanced Execution Engine\
+            </div>\
+            \
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight tracking-tighter">\
+                Opere com a precis\'e3o dos <span class="gradient-text text-white">Algoritmos.</span>\
+            </h1>\
+            \
+            <p class="text-lg md:text-xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto font-light">\
+                O SafeScalp V2.0 \'e9 a camada de intelig\'eancia t\'e1tica para MetaTrader 5. Simplicidade absoluta para focar no gr\'e1fico e seguran\'e7a institucional para blindar a sua conta.\
+            </p>\
+\
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">\
+                <a href="https://pay.kiwify.com.br/Je0XGFE" target="_blank" class="w-full sm:w-auto bg-brand-success hover:bg-emerald-400 text-brand-dark font-black px-10 py-5 rounded-xl transition-all flex items-center justify-center gap-2 text-lg shadow-2xl shadow-emerald-500/20 transform hover:-translate-y-1">\
+                    <i data-lucide="lock" class="w-5 h-5"></i> ADQUIRIR LICEN\'c7A\
+                </a>\
+                <a href="SafeScalp_V2.03.ex5" class="w-full sm:w-auto bg-slate-800/50 hover:bg-slate-800 text-white font-bold px-10 py-5 rounded-xl transition-all border border-slate-700 flex items-center justify-center gap-2 transform hover:-translate-y-1">\
+                    <i data-lucide="download" class="w-5 h-5"></i> TESTAR 7 DIAS GR\'c1TIS\
+                </a>\
+            </div>\
+            \
+            <p class="mt-8 text-slate-500 text-[10px] font-bold uppercase tracking-[0.3em] flex items-center justify-center gap-2">\
+                <i data-lucide="shield" class="w-3 h-3"></i> Garantia incondicional de satisfa\'e7\'e3o\
+            </p>\
+        </div>\
+    </section>\
+\
+    <!-- FUNCIONALIDADES -->\
+    <section id="funcionalidades" class="py-24 px-6 border-t border-brand-border bg-brand-dark/30">\
+        <div class="max-w-6xl mx-auto">\
+            <div class="text-center mb-20">\
+                <h2 class="text-xs font-black text-brand-primary uppercase tracking-[0.4em] mb-4">Core Technology</h2>\
+                <h3 class="text-3xl md:text-5xl font-bold">Engenharia de Execu\'e7\'e3o</h3>\
+            </div>\
+\
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">\
+                <!-- Card 1 -->\
+                <div class="feature-card p-8 rounded-3xl bg-brand-card border border-brand-border flex flex-col h-full shadow-xl">\
+                    <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 text-brand-primary border border-blue-500/20">\
+                        <i data-lucide="target" class="w-7 h-7"></i>\
+                    </div>\
+                    <h4 class="text-xl font-bold mb-4">Puxar pro Zero</h4>\
+                    <p class="text-sm text-slate-400 leading-relaxed font-light flex-grow">\
+                        Defina o gatilho (ex: 50% do alvo) e a boleta move o seu stop para o ponto de equil\'edbrio automaticamente, cobrindo spread e custos operacionais.\
+                    </p>\
+                </div>\
+\
+                <!-- Card 2 -->\
+                <div class="feature-card p-8 rounded-3xl bg-brand-card border border-brand-border flex flex-col h-full shadow-xl">\
+                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-brand-success border border-emerald-500/20">\
+                        <i data-lucide="bar-chart-3" class="w-7 h-7"></i>\
+                    </div>\
+                    <h4 class="text-xl font-bold mb-4">Preview Financeiro</h4>\
+                    <p class="text-sm text-slate-400 leading-relaxed font-light flex-grow">\
+                        Visualize o seu lucro ou preju\'edzo em d\'f3lares (USD) projetado no gr\'e1fico antes mesmo de abrir a ordem. Risco calculado em tempo real.\
+                    </p>\
+                </div>\
+\
+                <!-- Card 3 -->\
+                <div class="feature-card p-8 rounded-3xl bg-brand-card border border-brand-border flex flex-col h-full shadow-xl">\
+                    <div class="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center mb-8 text-brand-danger border border-red-500/20">\
+                        <i data-lucide="shield-alert" class="w-7 h-7"></i>\
+                    </div>\
+                    <h4 class="text-xl font-bold mb-4">Anti-Overtrading</h4>\
+                    <p class="text-sm text-slate-400 leading-relaxed font-light flex-grow">\
+                        Bloqueio autom\'e1tico de novas entradas enquanto estiver posicionado. Disciplina t\'e1tica para scalpers que operam alta volatilidade.\
+                    </p>\
+                </div>\
+\
+                <!-- Card 4 -->\
+                <div class="feature-card p-8 rounded-3xl bg-brand-card border border-brand-border flex flex-col h-full shadow-xl">\
+                    <div class="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-8 text-amber-500 border border-amber-500/20">\
+                        <i data-lucide="globe" class="w-7 h-7"></i>\
+                    </div>\
+                    <h4 class="text-xl font-bold mb-4">Radar de Not\'edcias</h4>\
+                    <p class="text-sm text-slate-400 leading-relaxed font-light flex-grow">\
+                        Monitoriza\'e7\'e3o em tempo real do calend\'e1rio econ\'f3mico dos EUA. Evite ser surpreendido por picos irracionais de volatilidade.\
+                    </p>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- INSTITUCIONAL / BROKERS -->\
+    <section id="institucional" class="py-32 px-6 border-t border-brand-border">\
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-20">\
+            <div class="flex-1">\
+                <h2 class="text-xs font-black text-brand-primary uppercase tracking-[0.4em] mb-4">Compatibility</h2>\
+                <h3 class="text-4xl font-bold mb-8 leading-tight">Padr\'e3o Global de<br>Baixa Lat\'eancia.</h3>\
+                <p class="text-slate-400 mb-10 leading-relaxed font-light text-lg">\
+                    A SafeScalp foi desenvolvida para performar nas condi\'e7\'f5es mais exigentes. Se opera via <strong>ActivTrades, Tickmill, Pepperstone</strong> ou est\'e1 em busca da aprova\'e7\'e3o em <strong>Prop Firms</strong> como FTMO e MyFundedFX, esta \'e9 a ferramenta definitiva.\
+                </p>\
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">\
+                    <div class="flex items-center gap-3 text-sm font-semibold text-slate-300">\
+                        <div class="w-6 h-6 bg-brand-success/20 rounded-full flex items-center justify-center text-brand-success"><i data-lucide="check" class="w-4 h-4"></i></div>\
+                        Contas Hedge & Netting\
+                    </div>\
+                    <div class="flex items-center gap-3 text-sm font-semibold text-slate-300">\
+                        <div class="w-6 h-6 bg-brand-success/20 rounded-full flex items-center justify-center text-brand-success"><i data-lucide="check" class="w-4 h-4"></i></div>\
+                        Setup Autom\'e1tico Nasdaq\
+                    </div>\
+                    <div class="flex items-center gap-3 text-sm font-semibold text-slate-300">\
+                        <div class="w-6 h-6 bg-brand-success/20 rounded-full flex items-center justify-center text-brand-success"><i data-lucide="check" class="w-4 h-4"></i></div>\
+                        C\'e1lculo de Margem Real\
+                    </div>\
+                    <div class="flex items-center gap-3 text-sm font-semibold text-slate-300">\
+                        <div class="w-6 h-6 bg-brand-success/20 rounded-full flex items-center justify-center text-brand-success"><i data-lucide="check" class="w-4 h-4"></i></div>\
+                        Suporte a High Spread\
+                    </div>\
+                </div>\
+            </div>\
+            <div class="flex-1 w-full relative">\
+                <div class="bg-gradient-to-br from-brand-primary/20 to-transparent absolute inset-0 blur-3xl -z-10"></div>\
+                <div class="bg-brand-card p-2 rounded-[32px] border border-brand-border shadow-2xl shadow-blue-500/10 overflow-hidden group">\
+                    <div class="aspect-video bg-brand-dark rounded-[24px] border border-brand-border flex items-center justify-center group-hover:scale-105 transition-transform duration-700">\
+                        <span class="text-slate-700 font-black italic tracking-widest opacity-30 text-xl text-center px-4 uppercase">Interface Otimizada para MetaTrader 5</span>\
+                    </div>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- SEGURAN\'c7A HWID -->\
+    <section id="seguranca" class="py-24 px-6 border-y border-brand-border bg-brand-card/50">\
+        <div class="max-w-4xl mx-auto text-center">\
+            <div class="w-20 h-20 bg-brand-primary/10 rounded-3xl flex items-center justify-center mx-auto mb-10 border border-brand-primary/20 rotate-12">\
+                <i data-lucide="database" class="w-10 h-10 text-brand-primary"></i>\
+            </div>\
+            <h2 class="text-3xl font-bold mb-6 leading-tight">Sua Licen\'e7a, Seu Hardware.</h2>\
+            <p class="text-slate-400 mb-12 leading-relaxed text-lg font-light">\
+                Utilizamos tecnologia de <strong>Hardware ID (HWID)</strong>. A sua licen\'e7a \'e9 vinculada exclusivamente ao seu computador, garantindo seguran\'e7a contra acessos n\'e3o autorizados. Dentro da sua m\'e1quina, tem liberdade total para trocar de corretora ou conta sempre que desejar.\
+            </p>\
+            <div class="flex flex-wrap items-center justify-center gap-12 opacity-30 grayscale contrast-125">\
+                <span class="text-2xl font-black tracking-tighter">METATRADER 5</span>\
+                <span class="text-2xl font-bold tracking-widest uppercase italic">Cloud-Sync</span>\
+                <span class="text-2xl font-black tracking-tighter">SECURED</span>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- PRICING CARD -->\
+    <section class="py-32 px-6">\
+        <div class="max-w-md mx-auto rounded-[40px] border-2 border-brand-primary p-12 bg-brand-card relative shadow-2xl shadow-blue-500/20 overflow-hidden">\
+            <div class="absolute top-0 right-0 bg-brand-primary text-white text-[9px] font-black px-10 py-1.5 rotate-45 translate-x-10 translate-y-4 uppercase tracking-[0.3em]">\
+                OFERTA ATIVA\
+            </div>\
+            \
+            <div class="text-center mb-10">\
+                <h3 class="text-brand-primary font-black tracking-[0.4em] uppercase text-[10px] mb-4">Acesso Integral</h3>\
+                <div class="flex items-baseline justify-center gap-1">\
+                    <span class="text-2xl font-bold text-slate-500">R$</span>\
+                    <span class="text-8xl font-black tracking-tighter">129</span>\
+                </div>\
+                <p class="text-slate-500 text-sm mt-4 font-medium uppercase tracking-widest">Licen\'e7a Semestral</p>\
+            </div>\
+            \
+            <ul class="space-y-5 mb-12 text-sm font-light text-slate-300 border-t border-brand-border pt-10">\
+                <li class="flex items-center gap-3"><i data-lucide="check" class="text-brand-success w-4 h-4"></i> SafeScalp V2.0 Original (.ex5)</li>\
+                <li class="flex items-center gap-3"><i data-lucide="check" class="text-brand-success w-4 h-4"></i> Puxar pro Zero Inteligente</li>\
+                <li class="flex items-center gap-3"><i data-lucide="check" class="text-brand-success w-4 h-4"></i> Machine Lock (V\'ednculo ao HWID)</li>\
+                <li class="flex items-center gap-3"><i data-lucide="check" class="text-brand-success w-4 h-4"></i> Suporte Cloud & Atualiza\'e7\'f5es</li>\
+            </ul>\
+\
+            <a href="https://pay.kiwify.com.br/Je0XGFE" target="_blank" class="block w-full bg-brand-primary hover:bg-blue-500 text-white text-center font-black py-5 rounded-2xl transition-all shadow-xl shadow-blue-500/40 transform hover:scale-[1.03] uppercase tracking-tighter text-lg">\
+                QUERO MEU ACESSO AGORA\
+            </a>\
+            \
+            <div class="mt-8 flex items-center justify-center gap-2 text-[10px] text-slate-600 uppercase font-black tracking-[0.2em]">\
+                <i data-lucide="lock" class="w-3 h-3"></i> Pagamento Seguro via Kiwify\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- FAQ -->\
+    <section class="py-24 px-6 border-t border-brand-border bg-brand-dark">\
+        <div class="max-w-3xl mx-auto">\
+            <h2 class="text-3xl font-bold text-center mb-12">D\'favidas Frequentes</h2>\
+            \
+            <div class="space-y-4">\
+                <div class="bg-brand-card border border-brand-border rounded-xl p-6">\
+                    <h4 class="font-bold text-lg mb-2">A boleta abre ordens sozinha?</h4>\
+                    <p class="text-slate-400 text-sm leading-relaxed text-justify">N\'e3o. A SafeScalp \'e9 uma ferramenta de <strong>execu\'e7\'e3o e gest\'e3o</strong>. A decis\'e3o de entrar no trade \'e9 sua. Ela apenas automatiza o risco e a prote\'e7\'e3o ao <strong>Puxar pro zero</strong> no momento exato definido por si.</p>\
+                </div>\
+                <div class="bg-brand-card border border-brand-border rounded-xl p-6">\
+                    <h4 class="font-bold text-lg mb-2">Funciona em Contas Demo?</h4>\
+                    <p class="text-slate-400 text-sm leading-relaxed text-justify">Sim. Ap\'f3s ativar a sua licen\'e7a com o e-mail de compra, pode usar a boleta em qualquer conta (Demo, Real ou Prop Firms) dentro do computador cadastrado.</p>\
+                </div>\
+                <div class="bg-brand-card border border-brand-border rounded-xl p-6">\
+                    <h4 class="font-bold text-lg mb-2">Como \'e9 feita a ativa\'e7\'e3o?</h4>\
+                    <p class="text-slate-400 text-sm leading-relaxed text-justify">Simples. Ao colocar a boleta no gr\'e1fico, basta preencher o campo de e-mail com o mesmo endere\'e7o usado na Kiwify. O sistema valida a sua licen\'e7a via Cloud instantaneamente.</p>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- FOOTER -->\
+    <footer class="py-24 px-6 border-t border-brand-border bg-black">\
+        <div class="max-w-6xl mx-auto text-center">\
+            <div class="flex items-center justify-center gap-3 mb-10 opacity-40">\
+                <i data-lucide="shield-check" class="w-7 h-7"></i>\
+                <span class="text-xl font-bold tracking-tight uppercase">SafeScalp</span>\
+            </div>\
+            <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em] leading-[2.5] max-w-3xl mx-auto font-bold italic">\
+                Desenvolvido por Felipe Boca. Ferramenta de execu\'e7\'e3o t\'e9cnica exclusiva para MT5.<br>\
+                O trading de ativos financeiros envolve risco elevado de perda. Resultados passados n\'e3o garantem lucros futuros.<br>\
+                Mantenha sempre a disciplina e o gerenciamento de risco rigoroso.\
+            </p>\
+            <div class="mt-16 text-slate-800 text-[10px] font-black uppercase tracking-[0.5em]">\
+                &copy; 2026 SafeScalp PRO. ALL RIGHTS RESERVED.\
+            </div>\
+        </div>\
+    </footer>\
+\
+    <!-- Initialize Icons -->\
+    <script>\
+        lucide.createIcons();\
+    </script>\
+</body>\
+</html>}
